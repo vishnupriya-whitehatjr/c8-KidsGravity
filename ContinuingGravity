@@ -1,0 +1,52 @@
+
+var kid1=createSprite(50,328,20,20);
+kid1.setAnimation("kid1");
+kid1.scale=0.2;
+
+var kid2=createSprite(150,330,20,20);
+kid2.setAnimation("kid2");
+kid2.scale=0.25;
+
+var kid3=createSprite(250,329,20,20);
+kid3.setAnimation("kid3");
+kid3.scale=0.2;
+
+var kid4=createSprite(350,332,20,20);
+kid4.setAnimation("kid4");
+kid4.scale=0.15;
+
+var ground=createSprite(200,365,800,10);
+
+
+
+function draw() {
+  background("skyblue");
+  kid1.collide(ground);
+  kid1.velocityY=kid1.velocityY+0.5;
+  if (keyWentDown("space")&& kid1.y>200) {
+    kid1.velocityY=-10;
+  }
+  
+  kid2.collide(ground);
+  kid2.velocityY=kid2.velocityY+0.5;
+  if(keyWentDown("space")&&kid2.y>200){
+  kid2.velocityY=-7;
+  }
+  
+  kid3.collide(ground);
+  kid3.velocityY=kid3.velocityY+0.5;
+  if(keyWentDown("space")&&kid3.y>200){
+    kid3.velocityY=-12;
+  }
+  
+  kid4.collide(ground);
+  kid4.velocityY=kid4.velocityY+0.5;
+  if(keyWentDown("space")&&kid4.y>200){
+    kid4.velocityY=-5;
+  }
+  
+  createEdgeSprites();
+  drawSprites();
+}
+
+code.org link : https://studio.code.org/projects/gamelab/W7RyTJTNSTqOLQEMYH_UofRDuobI1AsuGyuPKl0NWDk
